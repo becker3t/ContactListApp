@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ContactList</string>
+    <string name="firstName">First Name</string>
+    <string name="lastName">Last Name</string>
+    <string name="saveBtn">Save</string>
+    <string name="photoBtn">Take Photo</string>
+    <string name="listBtn">Go To List</string>
+    <string name="backToMainBtn">Back To Main</string>
+    <string name="fillAllFieldsMessage">Fill all of the fields, loser.</string>
+    <string name="emptyContacts">Contact List Empty</string>
+</resources>
