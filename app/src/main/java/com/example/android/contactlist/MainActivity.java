@@ -87,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
             try {
                 InputStream image_stream = getContentResolver().openInputStream(mCurrentPhotoURI);
                 Bitmap imageBitmap = BitmapFactory.decodeStream(image_stream);
+                Log.d(TAG, "onActivityResult: currentPhotoPath: " + mCurrentPhotoURI.getPath());
                 contactImgVw.setImageBitmap(imageBitmap);
                 pictureTaken = true;
             } catch (Exception ex) {
@@ -123,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
                         "com.example.android.contactlist",
                         photoFile);
 
-//                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
+                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
                 mCurrentPhotoURI = photoURI;
                 Log.d(TAG, "TakePhoto: Photo created at '" + mCurrentPhotoURI.getPath() + "'");
                 startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
